@@ -1,0 +1,12 @@
+F:\Elaborato_Maturità\AAS\AAS\bin\Debug\AAS.exe.config
+F:\Elaborato_Maturità\AAS\AAS\bin\Debug\AAS.exe
+F:\Elaborato_Maturità\AAS\AAS\bin\Debug\AAS.pdb
+F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.csprojAssemblyReference.cache
+F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.Scope.resources
+F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.Properties.Resources.resources
+F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.csproj.GenerateResource.cache
+F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.csproj.CoreCompileInputs.cache
+F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.exe
+F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.pdb
+F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.Loading.resources
+F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.Trajectory.resources
