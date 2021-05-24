@@ -28,15 +28,16 @@ namespace AAS
             if (ok1 && ok2)
                 chartControl1.AddPoint(x, y);
             */
-            if (txt_X.Text != "" && txt_Y.Text != "" && txt_Distance.Text != "")
+            if (txt_X.Text != "" && txt_Y.Text != "" && txt_Ang.Text != "")
             {
                 Trajectory t = new Trajectory();
                 Loading l = new Loading();
                 t.M = int.Parse(txt_ObjM.Text);
                 MessageBox.Show(cbb_Shell.Text);
                 t.V = int.Parse(cbb_Shell.Text.Split(' ')[0]);
-                t.A = int.Parse(txt_Distance.Text);
+                t.A = int.Parse(txt_Ang.Text);
                 t.F = double.Parse(txt_Friction.Text);
+                MessageBox.Show(t.F.ToString());
                 t.X = int.Parse(txt_X.Text);
                 t.Y = int.Parse(txt_Y.Text);
 
@@ -52,7 +53,7 @@ namespace AAS
         private void btn_Set_Click(object sender, EventArgs e)
         {
             ok = false;
-            if (txt_X.Text != "" && txt_Y.Text != "" && txt_Distance.Text != "")
+            if (txt_X.Text != "" && txt_Y.Text != "" && txt_Ang.Text != "")
             {
                 int x;
                 int y;

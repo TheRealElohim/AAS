@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.bgw_Load = new System.ComponentModel.BackgroundWorker();
-            this.Trj = new AAS.GridControlTrajectory();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lw_XY = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.carthesianPlaneTrajectory2 = new AAS.CarthesianPlaneTrajectory();
             this.SuspendLayout();
             // 
             // bgw_Load
@@ -44,20 +44,6 @@
             this.bgw_Load.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgw_Load_DoWork);
             this.bgw_Load.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgw_Load_ProgressChanged);
             this.bgw_Load.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgw_Load_RunWorkerCompleted);
-            // 
-            // Trj
-            // 
-            this.Trj.ColorAssi = System.Drawing.Color.Black;
-            this.Trj.ColorExtra = System.Drawing.Color.LightGray;
-            this.Trj.K = 20;
-            this.Trj.Location = new System.Drawing.Point(-2, 12);
-            this.Trj.MainColor = System.Drawing.Color.DarkBlue;
-            this.Trj.Name = "Trj";
-            this.Trj.Size = new System.Drawing.Size(790, 362);
-            this.Trj.TabIndex = 3;
-            this.Trj.Text = "gridControlTrajectory1";
-            this.Trj.XC = 395;
-            this.Trj.YC = 181;
             // 
             // label1
             // 
@@ -100,6 +86,22 @@
             this.columnHeader4.Text = "Y";
             this.columnHeader4.Width = 121;
             // 
+            // carthesianPlaneTrajectory2
+            // 
+            this.carthesianPlaneTrajectory2.ColorAssi = System.Drawing.Color.Black;
+            this.carthesianPlaneTrajectory2.ColorExtra = System.Drawing.Color.LightGray;
+            this.carthesianPlaneTrajectory2.ColorLine = System.Drawing.Color.Red;
+            this.carthesianPlaneTrajectory2.ColorPoint = System.Drawing.Color.Red;
+            this.carthesianPlaneTrajectory2.K = 20;
+            this.carthesianPlaneTrajectory2.Location = new System.Drawing.Point(12, 12);
+            this.carthesianPlaneTrajectory2.MainColor = System.Drawing.Color.DarkBlue;
+            this.carthesianPlaneTrajectory2.Name = "carthesianPlaneTrajectory2";
+            this.carthesianPlaneTrajectory2.Size = new System.Drawing.Size(778, 362);
+            this.carthesianPlaneTrajectory2.TabIndex = 7;
+            this.carthesianPlaneTrajectory2.Text = "5";
+            this.carthesianPlaneTrajectory2.XC = 389;
+            this.carthesianPlaneTrajectory2.YC = 181;
+            // 
             // Trajectory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,7 +110,7 @@
             this.Controls.Add(this.lw_XY);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Trj);
+            this.Controls.Add(this.carthesianPlaneTrajectory2);
             this.Name = "Trajectory";
             this.Text = "Trajectory";
             this.Load += new System.EventHandler(this.Trajectory_Load);
@@ -131,11 +133,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private GridControlTrajectory Trj;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView lw_XY;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private CarthesianPlaneTrajectory carthesianPlaneTrajectory2;
     }
 }

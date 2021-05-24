@@ -19,7 +19,7 @@ namespace AAS
 
         public GridControlTrajectory()
         {
-            K = 20;
+            K = 50;
             mainC = Color.DarkBlue;
             colAs = Color.Black;
             extraC = Color.LightGray;

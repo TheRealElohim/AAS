@@ -21,7 +21,6 @@ namespace AAS
 
         private void Loading_Load(object sender, EventArgs e)
         {
-            Thread.Sleep(3000);
             if (bgw_Control.IsBusy != true)
                 bgw_Control.RunWorkerAsync(pos);
         }

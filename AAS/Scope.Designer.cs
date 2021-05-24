@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_Distance = new System.Windows.Forms.TextBox();
+            this.txt_Ang = new System.Windows.Forms.TextBox();
             this.btn_Set = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,9 +43,9 @@
             this.btn_Shoot = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cScope = new AAS.CarthesianPlaneScope();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_Friction = new System.Windows.Forms.TextBox();
+            this.cScope = new AAS.CarthesianPlaneScope();
             this.SuspendLayout();
             // 
             // label7
@@ -58,14 +58,14 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "Ang (Deg)";
             // 
-            // txt_Distance
+            // txt_Ang
             // 
-            this.txt_Distance.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Distance.Location = new System.Drawing.Point(661, 195);
-            this.txt_Distance.Name = "txt_Distance";
-            this.txt_Distance.Size = new System.Drawing.Size(179, 19);
-            this.txt_Distance.TabIndex = 29;
-            this.txt_Distance.Text = "12";
+            this.txt_Ang.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Ang.Location = new System.Drawing.Point(661, 195);
+            this.txt_Ang.Name = "txt_Ang";
+            this.txt_Ang.Size = new System.Drawing.Size(179, 19);
+            this.txt_Ang.TabIndex = 29;
+            this.txt_Ang.Text = "12";
             // 
             // btn_Set
             // 
@@ -78,6 +78,7 @@
             this.btn_Set.TabIndex = 28;
             this.btn_Set.Text = "SET";
             this.btn_Set.UseVisualStyleBackColor = false;
+            this.btn_Set.Click += new System.EventHandler(this.btn_Set_Click);
             // 
             // label6
             // 
@@ -108,7 +109,7 @@
             "5 m/s",
             "10 m/s",
             "20 m/s",
-            "50 m/s"});
+            "500 m/s"});
             this.cbb_Shell.Location = new System.Drawing.Point(661, 421);
             this.cbb_Shell.Name = "cbb_Shell";
             this.cbb_Shell.Size = new System.Drawing.Size(180, 21);
@@ -182,6 +183,7 @@
             this.btn_Shoot.TabIndex = 17;
             this.btn_Shoot.Text = "SHOOT";
             this.btn_Shoot.UseVisualStyleBackColor = false;
+            this.btn_Shoot.Click += new System.EventHandler(this.btn_Shoot_Click);
             // 
             // label4
             // 
@@ -203,22 +205,6 @@
             this.label8.TabIndex = 32;
             this.label8.Text = "Coordinates";
             // 
-            // cScope
-            // 
-            this.cScope.ColorAssi = System.Drawing.Color.Black;
-            this.cScope.ColorExtra = System.Drawing.Color.LightGray;
-            this.cScope.ColorLine = System.Drawing.Color.Red;
-            this.cScope.ColorPoint = System.Drawing.Color.Red;
-            this.cScope.K = 20;
-            this.cScope.Location = new System.Drawing.Point(12, 61);
-            this.cScope.MainColor = System.Drawing.Color.DarkBlue;
-            this.cScope.Name = "cScope";
-            this.cScope.Size = new System.Drawing.Size(526, 490);
-            this.cScope.TabIndex = 33;
-            this.cScope.Text = "carthesianPlaneScope1";
-            this.cScope.XC = 263;
-            this.cScope.YC = 245;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -236,7 +222,23 @@
             this.txt_Friction.Name = "txt_Friction";
             this.txt_Friction.Size = new System.Drawing.Size(180, 19);
             this.txt_Friction.TabIndex = 34;
-            this.txt_Friction.Text = "1.01";
+            this.txt_Friction.Text = "0,000186";
+            // 
+            // cScope
+            // 
+            this.cScope.ColorAssi = System.Drawing.Color.Black;
+            this.cScope.ColorExtra = System.Drawing.Color.LightGray;
+            this.cScope.ColorLine = System.Drawing.Color.Red;
+            this.cScope.ColorPoint = System.Drawing.Color.Red;
+            this.cScope.K = 20;
+            this.cScope.Location = new System.Drawing.Point(12, 61);
+            this.cScope.MainColor = System.Drawing.Color.DarkBlue;
+            this.cScope.Name = "cScope";
+            this.cScope.Size = new System.Drawing.Size(526, 490);
+            this.cScope.TabIndex = 33;
+            this.cScope.Text = "carthesianPlaneScope1";
+            this.cScope.XC = 263;
+            this.cScope.YC = 245;
             // 
             // Scope
             // 
@@ -249,7 +251,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txt_Distance);
+            this.Controls.Add(this.txt_Ang);
             this.Controls.Add(this.btn_Set);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -271,7 +273,7 @@
         #endregion
 
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_Distance;
+        private System.Windows.Forms.TextBox txt_Ang;
         private System.Windows.Forms.Button btn_Set;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

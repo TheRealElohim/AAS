@@ -12,25 +12,26 @@ namespace AAS
     {
         Color colorP;
         Color colorL;
-        List<PointF> points;
         bool ok;
+        PointF[] ps = new PointF[] { new PointF(0,0), new PointF(0, 0) };
 
         public CarthesianPlaneTrajectory()
         {
             ColorPoint = Color.Red;
             ColorLine = Color.Red;
-            points = new List<PointF>();
         }
-        public void AddPoint(double x, double y, bool k)
+        public void AddPoint(List<PointF> points)
         {
-            points.Add(new PointF((float)x, (float)y));
-            Order();
+            ps = points.ToArray(); 
+            //Order();
             Refresh();
         }
         public void IsOK(bool k)
         {
             ok = k;
         }
+
+        /*
         void Order()
         {
             for (int i = 0; i < points.Count - 1; i++)
@@ -43,7 +44,8 @@ namespace AAS
                         points[j] = dep;
                     }
                 }
-        }
+        }*/
+
         public Color ColorPoint
         {
             get { return colorP; }
@@ -72,10 +74,15 @@ namespace AAS
             g.ScaleTransform(K, -K);
             Pen p = new Pen(ColorPoint, 1 / K);
             Pen p2 = new Pen(ColorLine, 1 / K);
-            PointF[] pointsF = points.ToArray();
 
-            if(ok == true)
-                g.DrawCurve(p2, pointsF);
+            g.DrawCurve(p2, ps);
+            /*
+            foreach(var elem in ps)
+            {
+                g.DrawEllipse(p, elem.X - 0.05f, elem.Y - 0.05f, 0.1f, 0.1f);
+                g.FillEllipse(p.Brush, elem.X - 0.05f, elem.Y - 0.05f, 0.1f, 0.1f);
+            }
+            */
         }
     }
 }
