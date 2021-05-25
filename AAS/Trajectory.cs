@@ -33,13 +33,12 @@ namespace AAS
             double y = 0;
             double g = 9.81;
             double t;
-            bool ok = false;
-            MessageBox.Show("Entrato");
 
             double v0x = V * Math.Cos(ang);
             double v0y = V * Math.Sin(ang);
             SuspendLayout();
-            l.Show();
+            if(V >= 100)
+                l.Show();
             for (double x = 0; y >= 0; x += 0.1)
             {
                 l.pos = x;

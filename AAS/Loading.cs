@@ -37,12 +37,13 @@ namespace AAS
                     p = pos;
                     bgw.ReportProgress(0);
                 }
-            }
+            } bgw.WorkerSupportsCancellation = true;
         }
 
         private void bgw_Control_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            pb_Load.PerformStep();
+            Action a = () => pb_Load.PerformStep();
+            pb_Load.Invoke(a);
         }
 
         private void bgw_Control_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -54,10 +55,6 @@ namespace AAS
             else if (e.Error != null)
             {
                 MessageBox.Show("Error: " + e.Error.Message);
-            }
-            else
-            {
-                Close();
             }
         }
     }
