@@ -29,16 +29,14 @@ namespace AAS
             if (ok1 && ok2)
                 chartControl1.AddPoint(x, y);
             */
-            if (txt_X.Text != "" && txt_Y.Text != "" && txt_Ang.Text != "")
+            if (txt_X.Text != "" && txt_Y.Text != "" && txt_Ang.Text != "" && cbb_Shell.Text != "")
             {
                 Trajectory t = new Trajectory();
                 Loading l = new Loading();
                 t.M = int.Parse(txt_ObjM.Text);
-                MessageBox.Show(cbb_Shell.Text);
                 t.V = int.Parse(cbb_Shell.Text.Split(' ')[0]);
                 t.A = int.Parse(txt_Ang.Text);
                 t.F = double.Parse(txt_Friction.Text);
-                MessageBox.Show(t.F.ToString());
                 t.X = int.Parse(txt_X.Text);
                 t.Y = int.Parse(txt_Y.Text);
 
@@ -46,7 +44,7 @@ namespace AAS
             }
             else
             {
-                MessageBox.Show("In order to set the target you need to specify its position (X, Y, Z or distace)", "Position Error", MessageBoxButtons.OK);
+                MessageBox.Show("In order to shoot the target you need to specify its attributes (friction, mass, velocity)", "Attribute Error", MessageBoxButtons.OK);
             }
         }
 
@@ -65,7 +63,7 @@ namespace AAS
             }
             else
             {
-                MessageBox.Show("In order to set the target you need to specify its position (X, Y, Z or distace)", "Position Error", MessageBoxButtons.OK);
+                MessageBox.Show("In order to set the target you need to specify its position (X, Y, Angle)", "Position Error", MessageBoxButtons.OK);
             }
         }
     }

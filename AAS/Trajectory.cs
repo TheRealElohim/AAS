@@ -13,7 +13,7 @@ namespace AAS
     public partial class Trajectory : Form
     {
         private Loading l = new Loading();
-        public double X, Y, A, M, V, F, R, MY;
+        public double X, Y, A, M, V, F, R, MY, MYT;
         private List<double[]> ps = new List<double[]>();
 
         public Trajectory()
@@ -40,6 +40,7 @@ namespace AAS
             SuspendLayout();
             if (V >= 100)
                 l.Show();
+
             for (double x = 0; y >= -10; x += 0.1)
             {
                 l.pos++;
@@ -47,11 +48,14 @@ namespace AAS
                 y = (-g * (Math.Pow(M, 2) / Math.Pow(F, 2)) - (v0y * M) / F) * (1 - (x * F / (v0x * M)) - 1) +
                     g * Math.Pow(M, 2) / (F * F) * Math.Log(1 - (x * F) / (v0x * M));
 
-                if (y >= -0.01 && y <= 0.01)
+                if (y >= 0)
                     R = x;
 
                 if (y > MY)
+                {
                     MY = y;
+                    MYT = t;
+                }
 
                 ps.Add(new []{x, y, t});
             }
@@ -67,16 +71,19 @@ namespace AAS
                 lw_XY.Items.Add(new ListViewItem(new [] { item[0].ToString(), item[1].ToString(), item[2].ToString()}));
             List<PointF> pf = new List<PointF>();
             List<PointF> p1f = new List<PointF>();
+            if(ok)
             foreach (var item in ps)
             {
                 pf.Add(new PointF((float)item[0], (float)item[1]));
                 p1f.Add(new PointF((float)item[2], (float)item[1]));
             }
-
-            txt_Friction.Text = F.ToString();
-            txt_Range.Text = R.ToString();
-            txt_Height.Text = MY.ToString();
+            txt_Friction.Text = F + " PI";
+            txt_Range.Text = R + " meters";
+            txt_Height.Text = MY + " seconds";
+            txt_Time.Text = MYT + " seconds";
+            txt_TOF.Text = p1f[p1f.Count - 1].X + " seconds";
             TrajectoryPlane.AddCurve(pf);
+            TimeHeightPlane.AddCurve(p1f);
 
         }
 
