@@ -19,6 +19,7 @@ namespace AAS
         public Trajectory()
         {
             InitializeComponent();
+            SuspendLayout();
         }
 
         private void Trajectory_Load(object sender, EventArgs e)
@@ -37,7 +38,6 @@ namespace AAS
             double v0x = V * Math.Cos(ang);
             double v0y = V * Math.Sin(ang);
 
-            SuspendLayout();
             if (V >= 100)
                 l.Show();
 
