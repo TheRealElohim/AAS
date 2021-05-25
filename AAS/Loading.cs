@@ -13,7 +13,7 @@ namespace AAS
 {
     public partial class Loading : Form
     {
-        public double pos = 0;
+        public double pos;
         public Loading()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace AAS
 
         private void Loading_Load(object sender, EventArgs e)
         {
-            if (bgw_Control.IsBusy != true)
+            if(bgw_Control.IsBusy != true)
                 bgw_Control.RunWorkerAsync(pos);
         }
 
@@ -42,7 +42,7 @@ namespace AAS
 
         private void bgw_Control_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            pb_Load.Increment(1);
+            pb_Load.PerformStep();
         }
 
         private void bgw_Control_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

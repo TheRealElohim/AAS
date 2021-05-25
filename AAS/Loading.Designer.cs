@@ -66,7 +66,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pb_Load);
             this.Name = "Loading";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loading";
+            this.Load += new System.EventHandler(this.Loading_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -264,6 +264,7 @@
             this.Controls.Add(this.txt_X);
             this.Controls.Add(this.btn_Shoot);
             this.Name = "Scope";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scope";
             this.ResumeLayout(false);
             this.PerformLayout();

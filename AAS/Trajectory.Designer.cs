@@ -71,7 +71,7 @@
             this.lw_XY.HideSelection = false;
             this.lw_XY.Location = new System.Drawing.Point(12, 380);
             this.lw_XY.Name = "lw_XY";
-            this.lw_XY.Size = new System.Drawing.Size(236, 124);
+            this.lw_XY.Size = new System.Drawing.Size(273, 124);
             this.lw_XY.TabIndex = 6;
             this.lw_XY.UseCompatibleStateImageBehavior = false;
             this.lw_XY.View = System.Windows.Forms.View.Details;
@@ -79,12 +79,12 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "X";
-            this.columnHeader3.Width = 110;
+            this.columnHeader3.Width = 125;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Y";
-            this.columnHeader4.Width = 121;
+            this.columnHeader4.Width = 143;
             // 
             // carthesianPlaneTrajectory2
             // 
@@ -112,6 +112,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.carthesianPlaneTrajectory2);
             this.Name = "Trajectory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trajectory";
             this.Load += new System.EventHandler(this.Trajectory_Load);
             this.ResumeLayout(false);

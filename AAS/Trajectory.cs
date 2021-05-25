@@ -70,10 +70,6 @@ namespace AAS
             {
                 MessageBox.Show("Error: " + e.Error.Message);
             }
-            else
-            {
-                MessageBox.Show("Done!");
-            }
         }
     }
 }
