@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AAS
@@ -14,6 +7,7 @@ namespace AAS
     public partial class Loading : Form
     {
         public double pos;
+
         public Loading()
         {
             InitializeComponent();
@@ -21,7 +15,7 @@ namespace AAS
 
         private void Loading_Load(object sender, EventArgs e)
         {
-            if(bgw_Control.IsBusy != true)
+            if (bgw_Control.IsBusy != true)
                 bgw_Control.RunWorkerAsync(pos);
         }
 
@@ -37,7 +31,8 @@ namespace AAS
                     p = pos;
                     bgw.ReportProgress(0);
                 }
-            } bgw.WorkerSupportsCancellation = true;
+            }
+            bgw.WorkerSupportsCancellation = true;
         }
 
         private void bgw_Control_ProgressChanged(object sender, ProgressChangedEventArgs e)

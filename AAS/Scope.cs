@@ -13,6 +13,7 @@ namespace AAS
     public partial class Scope : Form
     {
         public bool ok;
+
         public Scope()
         {
             InitializeComponent();
@@ -47,7 +48,6 @@ namespace AAS
             {
                 MessageBox.Show("In order to set the target you need to specify its position (X, Y, Z or distace)", "Position Error", MessageBoxButtons.OK);
             }
-
         }
 
         private void btn_Set_Click(object sender, EventArgs e)
