@@ -13,7 +13,7 @@ namespace AAS
 {
     public partial class Loading : Form
     {
-        public double pos;
+        public double pos = 0;
         public Loading()
         {
             InitializeComponent();
@@ -54,6 +54,10 @@ namespace AAS
             else if (e.Error != null)
             {
                 MessageBox.Show("Error: " + e.Error.Message);
+            }
+            else
+            {
+                Close();
             }
         }
     }

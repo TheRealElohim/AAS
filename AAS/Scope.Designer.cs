@@ -109,7 +109,7 @@
             "5 m/s",
             "10 m/s",
             "20 m/s",
-            "500 m/s"});
+            "150 m/s"});
             this.cbb_Shell.Location = new System.Drawing.Point(661, 421);
             this.cbb_Shell.Name = "cbb_Shell";
             this.cbb_Shell.Size = new System.Drawing.Size(180, 21);
