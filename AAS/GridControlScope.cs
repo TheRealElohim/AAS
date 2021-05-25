@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AAS
 {
-    class GridControlScope : Control
+    internal class GridControlScope : Control
     {
-        int xc = 100;
-        int yc = 100;
+        private int xc = 100;
+        private int yc = 100;
         public int K { get; set; }
-        Color mainC;
-        Color colAs;
-        Color extraC;
+        private Color mainC;
+        private Color colAs;
+        private Color extraC;
 
         public GridControlScope()
         {
@@ -25,6 +21,7 @@ namespace AAS
             extraC = Color.LightGray;
             DoubleBuffered = true;
         }
+
         public Color MainColor
         {
             get { return mainC; }
@@ -34,6 +31,7 @@ namespace AAS
                 Refresh();
             }
         }
+
         public Color ColorAssi
         {
             get { return colAs; }
@@ -43,6 +41,7 @@ namespace AAS
                 Refresh();
             }
         }
+
         public Color ColorExtra
         {
             get { return extraC; }
@@ -52,6 +51,7 @@ namespace AAS
                 Refresh();
             }
         }
+
         public int XC
         {
             get { return xc; }
@@ -61,6 +61,7 @@ namespace AAS
                 Refresh();
             }
         }
+
         public int YC
         {
             get { return yc; }
@@ -70,6 +71,7 @@ namespace AAS
                 Refresh();
             }
         }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -95,8 +97,6 @@ namespace AAS
             for (int i = -numy; i <= numy; i++)
                 g.DrawLine(p, xmin, i, xmax, i);
 
-
-
             g.DrawLine(p2, 0, ymin, 0, ymax);
             g.DrawLine(p2, xmin, 0, xmax, 0);
             g.DrawEllipse(p2, 0 - this.Width / K / 2, 0 - this.Height / K / 2, this.Width / K, this.Height / K);
@@ -120,8 +120,8 @@ namespace AAS
                 g.DrawLine(p, i, ymin, i, ymax);
             for (int i = -numy; i <= numy; i++)
                 g.DrawLine(p, xmin, i, xmax, i);
-
         }
+
         protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
@@ -129,6 +129,7 @@ namespace AAS
             yc = this.Height / 2;
             Refresh();
         }
+
         /*protected override void OnMouseWheel(MouseEventArgs e)
         {
             base.OnMouseWheel(e);

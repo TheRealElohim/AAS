@@ -34,7 +34,7 @@ namespace AAS
             double g = 9.81;
             double t;
 
-            double v0x = V * Math.Cos(ang); 
+            double v0x = V * Math.Cos(ang);
             double v0y = V * Math.Sin(ang);
 
             SuspendLayout();
@@ -83,7 +83,6 @@ namespace AAS
             txt_TOF.Text = p1f[p1f.Count - 1].X + " seconds";
             TrajectoryPlane.AddCurve(pf);
             TimeHeightPlane.AddCurve(p1f);
-
         }
 
         private void bgw_Load_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Xml.Serialization;
 
 namespace AAS
 {
@@ -18,6 +17,7 @@ namespace AAS
             ColorPoint = Color.Red;
             ColorLine = Color.Red;
         }
+
         public void AddCurve(List<PointF> points)
         {
             ps = points.ToArray();

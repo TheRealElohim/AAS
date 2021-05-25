@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace AAS
 {
-    class CarthesianPlaneScope : GridControlScope
+    internal class CarthesianPlaneScope : GridControlScope
     {
-        Color colorP;
-        Color colorL;
-        PointF point;
+        private Color colorP;
+        private Color colorL;
+        private PointF point;
 
         public CarthesianPlaneScope()
         {
             ColorPoint = Color.Red;
             ColorLine = Color.Red;
         }
+
         public void AddPoint(float x, float y)
         {
             point = (new PointF(x, y));
@@ -34,6 +30,7 @@ namespace AAS
                 Refresh();
             }
         }
+
         public Color ColorLine
         {
             get { return colorL; }
@@ -43,6 +40,7 @@ namespace AAS
                 Refresh();
             }
         }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
