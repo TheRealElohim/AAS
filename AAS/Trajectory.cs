@@ -71,7 +71,6 @@ namespace AAS
                 lw_XY.Items.Add(new ListViewItem(new [] { item[0].ToString(), item[1].ToString(), item[2].ToString()}));
             List<PointF> pf = new List<PointF>();
             List<PointF> p1f = new List<PointF>();
-            if(ok)
             foreach (var item in ps)
             {
                 pf.Add(new PointF((float)item[0], (float)item[1]));
