@@ -230,7 +230,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(641, 348);
+            this.label13.Location = new System.Drawing.Point(641, 352);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(33, 12);
             this.label13.TabIndex = 19;
@@ -239,11 +239,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(641, 414);
+            this.label14.Location = new System.Drawing.Point(641, 418);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 12);
+            this.label14.Size = new System.Drawing.Size(145, 12);
             this.label14.TabIndex = 21;
-            this.label14.Text = "Time of Flight";
+            this.label14.Text = "Total Time of Flight";
             // 
             // txt_TOF
             // 

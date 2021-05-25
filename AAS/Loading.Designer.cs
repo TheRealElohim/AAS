@@ -34,6 +34,7 @@
             // 
             // pb_Load
             // 
+            this.pb_Load.ForeColor = System.Drawing.Color.Red;
             this.pb_Load.Location = new System.Drawing.Point(14, 13);
             this.pb_Load.Name = "pb_Load";
             this.pb_Load.Size = new System.Drawing.Size(758, 22);

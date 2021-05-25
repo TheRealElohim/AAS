@@ -12,16 +12,16 @@ namespace AAS
     {
         Color colorP;
         Color colorL;
-        Point point;
+        PointF point;
 
         public CarthesianPlaneScope()
         {
             ColorPoint = Color.Red;
             ColorLine = Color.Red;
         }
-        public void AddPoint(int x, int y)
+        public void AddPoint(float x, float y)
         {
-            point = (new Point(x, y));
+            point = (new PointF(x, y));
             Refresh();
         }
 

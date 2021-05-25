@@ -33,18 +33,18 @@ namespace AAS
             {
                 Trajectory t = new Trajectory();
                 Loading l = new Loading();
-                t.M = int.Parse(txt_ObjM.Text);
-                t.V = int.Parse(cbb_Shell.Text.Split(' ')[0]);
-                t.A = int.Parse(txt_Ang.Text);
+                t.M = double.Parse(txt_ObjM.Text);
+                t.V = double.Parse(cbb_Shell.Text.Split(' ')[0]);
+                t.A = double.Parse(txt_Ang.Text);
                 t.F = double.Parse(txt_Friction.Text);
-                t.X = int.Parse(txt_X.Text);
-                t.Y = int.Parse(txt_Y.Text);
+                t.X = double.Parse(txt_X.Text);
+                t.Y = double.Parse(txt_Y.Text);
 
                 t.ShowDialog(this);
             }
             else
             {
-                MessageBox.Show("In order to shoot the target you need to specify its attributes (friction, mass, velocity)", "Attribute Error", MessageBoxButtons.OK);
+                MessageBox.Show("In order to shoot the target you need to specify its attributes (Friction, Mass, Velocity)", "Attribute Error", MessageBoxButtons.OK);
             }
         }
 
@@ -53,17 +53,17 @@ namespace AAS
             ok = false;
             if (txt_X.Text != "" && txt_Y.Text != "" && txt_Ang.Text != "")
             {
-                int x;
-                int y;
-                bool ok1 = int.TryParse(txt_X.Text, out x);
-                bool ok2 = int.TryParse(txt_Y.Text, out y);
+                double x;
+                double y;
+                bool ok1 = double.TryParse(txt_X.Text, out x);
+                bool ok2 = double.TryParse(txt_Y.Text, out y);
                 if (ok1 && ok2)
-                    cScope.AddPoint(x, y);
+                    cScope.AddPoint((float)x, (float)y);
                 ok = true;
             }
             else
             {
-                MessageBox.Show("In order to set the target you need to specify its position (X, Y, Angle)", "Position Error", MessageBoxButtons.OK);
+                MessageBox.Show("In order to set the target you need to specify its position (X, Y, Angle, Distance)", "Position Error", MessageBoxButtons.OK);
             }
         }
     }

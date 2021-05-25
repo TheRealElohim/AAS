@@ -52,16 +52,16 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(546, 193);
+            this.label7.Location = new System.Drawing.Point(545, 201);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 12);
+            this.label7.Size = new System.Drawing.Size(110, 12);
             this.label7.TabIndex = 30;
-            this.label7.Text = "Angle (Deg)";
+            this.label7.Text = "Angle (Degrees)";
             // 
             // txt_Ang
             // 
             this.txt_Ang.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Ang.Location = new System.Drawing.Point(550, 211);
+            this.txt_Ang.Location = new System.Drawing.Point(549, 219);
             this.txt_Ang.Name = "txt_Ang";
             this.txt_Ang.Size = new System.Drawing.Size(179, 19);
             this.txt_Ang.TabIndex = 29;
@@ -72,7 +72,7 @@
             this.btn_Set.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_Set.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Set.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Set.Location = new System.Drawing.Point(548, 249);
+            this.btn_Set.Location = new System.Drawing.Point(546, 265);
             this.btn_Set.Name = "btn_Set";
             this.btn_Set.Size = new System.Drawing.Size(182, 40);
             this.btn_Set.TabIndex = 28;
@@ -119,7 +119,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(547, 411);
+            this.label3.Location = new System.Drawing.Point(547, 406);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 12);
             this.label3.TabIndex = 23;
@@ -148,7 +148,7 @@
             // txt_ObjM
             // 
             this.txt_ObjM.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ObjM.Location = new System.Drawing.Point(550, 426);
+            this.txt_ObjM.Location = new System.Drawing.Point(550, 421);
             this.txt_ObjM.Name = "txt_ObjM";
             this.txt_ObjM.Size = new System.Drawing.Size(180, 19);
             this.txt_ObjM.TabIndex = 20;
@@ -209,7 +209,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(547, 374);
+            this.label9.Location = new System.Drawing.Point(545, 357);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 12);
             this.label9.TabIndex = 35;
@@ -218,7 +218,7 @@
             // txt_Friction
             // 
             this.txt_Friction.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Friction.Location = new System.Drawing.Point(550, 389);
+            this.txt_Friction.Location = new System.Drawing.Point(548, 372);
             this.txt_Friction.Name = "txt_Friction";
             this.txt_Friction.Size = new System.Drawing.Size(180, 19);
             this.txt_Friction.TabIndex = 34;
@@ -231,7 +231,7 @@
             this.cScope.ColorLine = System.Drawing.Color.Red;
             this.cScope.ColorPoint = System.Drawing.Color.Red;
             this.cScope.K = 20;
-            this.cScope.Location = new System.Drawing.Point(12, 61);
+            this.cScope.Location = new System.Drawing.Point(12, 59);
             this.cScope.MainColor = System.Drawing.Color.DarkBlue;
             this.cScope.Name = "cScope";
             this.cScope.Size = new System.Drawing.Size(490, 490);

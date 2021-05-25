@@ -122,19 +122,19 @@ namespace AAS
                 g.DrawLine(p, xmin, i, xmax, i);
 
         }
-        /*protected override void OnSizeChanged(EventArgs e)
+        protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
             xc = this.Width / 2;
             yc = this.Height / 2;
             Refresh();
-        }*/
-        protected override void OnMouseWheel(MouseEventArgs e)
+        }
+        /*protected override void OnMouseWheel(MouseEventArgs e)
         {
             base.OnMouseWheel(e);
             if (K + e.Delta / 60 > 0)
                 K += e.Delta / 60;
             Refresh();
-        }
+        }*/
     }
 }
