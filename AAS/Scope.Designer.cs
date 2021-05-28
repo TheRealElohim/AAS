@@ -44,8 +44,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_Friction = new System.Windows.Forms.TextBox();
+            this.txt_FrictionY = new System.Windows.Forms.TextBox();
             this.cScope = new AAS.CarthesianPlaneScope();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_FrictionX = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label7
@@ -212,20 +215,20 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(545, 357);
+            this.label9.Location = new System.Drawing.Point(531, 338);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 12);
+            this.label9.Size = new System.Drawing.Size(12, 12);
             this.label9.TabIndex = 35;
-            this.label9.Text = "Friction";
+            this.label9.Text = "X";
             // 
-            // txt_Friction
+            // txt_FrictionY
             // 
-            this.txt_Friction.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Friction.Location = new System.Drawing.Point(548, 372);
-            this.txt_Friction.Name = "txt_Friction";
-            this.txt_Friction.Size = new System.Drawing.Size(180, 19);
-            this.txt_Friction.TabIndex = 34;
-            this.txt_Friction.Text = "0,000186";
+            this.txt_FrictionY.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_FrictionY.Location = new System.Drawing.Point(548, 372);
+            this.txt_FrictionY.Name = "txt_FrictionY";
+            this.txt_FrictionY.Size = new System.Drawing.Size(180, 19);
+            this.txt_FrictionY.TabIndex = 34;
+            this.txt_FrictionY.Text = "0,000186";
             // 
             // cScope
             // 
@@ -243,13 +246,45 @@
             this.cScope.XC = 245;
             this.cScope.YC = 245;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(544, 320);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 12);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Friction";
+            // 
+            // txt_FrictionX
+            // 
+            this.txt_FrictionX.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_FrictionX.Location = new System.Drawing.Point(549, 335);
+            this.txt_FrictionX.Name = "txt_FrictionX";
+            this.txt_FrictionX.Size = new System.Drawing.Size(180, 19);
+            this.txt_FrictionX.TabIndex = 36;
+            this.txt_FrictionX.Text = "0,000186";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(530, 375);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(12, 12);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Y";
+            // 
             // Scope
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 561);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txt_FrictionX);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_Friction);
+            this.Controls.Add(this.txt_FrictionY);
             this.Controls.Add(this.cScope);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
@@ -294,7 +329,10 @@
         private System.Windows.Forms.Label label8;
         private CarthesianPlaneScope cScope;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_Friction;
+        private System.Windows.Forms.TextBox txt_FrictionY;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txt_FrictionX;
+        private System.Windows.Forms.Label label11;
     }
 }
 

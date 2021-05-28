@@ -33,7 +33,7 @@ namespace AAS
                     bgw.ReportProgress(0, p);
                 }
             }
-            bgw.WorkerSupportsCancellation = true;
+            bgw.CancelAsync();
         }
 
         private void bgw_Control_ProgressChanged(object sender, ProgressChangedEventArgs e)

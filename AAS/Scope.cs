@@ -29,7 +29,8 @@ namespace AAS
                 t.M = double.Parse(txt_ObjM.Text);
                 t.V = double.Parse(cbb_Shell.Text.Split(' ')[0]);
                 t.A = double.Parse(txt_Ang.Text);
-                t.F = double.Parse(txt_Friction.Text);
+                t.Fx = double.Parse(txt_FrictionX.Text);
+                t.Fy = double.Parse(txt_FrictionY.Text);
                 t.X = double.Parse(txt_X.Text);
                 t.Y = double.Parse(txt_Y.Text);
 

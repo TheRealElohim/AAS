@@ -13,7 +13,7 @@ namespace AAS
     public partial class Trajectory : Form
     {
         private Loading l = new Loading();
-        public double X, Y, A, M, V, F, R, MY, MYT;
+        public double X, Y, A, M, V, Fx, Fy, R, MY, MYT;
         private List<double[]> ps = new List<double[]>();
 
         public Trajectory()
@@ -44,9 +44,9 @@ namespace AAS
             for (double x = 0; y >= 0; x += 0.1)
             {
                 l.pos = x;
-                t = (-M / F * Math.Log(1 - (x * F) / (v0x * M)));
-                y = (-g * (Math.Pow(M, 2) / Math.Pow(F, 2)) - (v0y * M) / F) * (1 - (x * F / (v0x * M)) - 1) +
-                    g * Math.Pow(M, 2) / (F * F) * Math.Log(1 - (x * F) / (v0x * M));
+                t = (-M / Fy * Math.Log(1 - (x * Fx) / (v0x * M)));
+                y = (-g * (Math.Pow(M, 2) / Math.Pow(Fy, 2)) - (v0y * M) / Fy) * (1 - (x * Fx / (v0x * M)) - 1) +
+                    g * Math.Pow(M, 2) / (Fx * Fy) * Math.Log(1 - (x * Fx) / (v0x * M));
 
                 if (y >= 0)
                     R = x;
@@ -75,7 +75,7 @@ namespace AAS
                 pf.Add(new PointF((float)item[0], (float)item[1]));
                 p1f.Add(new PointF((float)item[2], (float)item[1]));
             }
-            txt_Friction.Text = F + " PI";
+            txt_Friction.Text = Fx + " PI";
             txt_Range.Text = R + " meters";
             txt_Height.Text = MY + " meters";
             txt_Time.Text = MYT + " seconds";

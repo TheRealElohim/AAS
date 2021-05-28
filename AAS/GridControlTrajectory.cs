@@ -116,10 +116,7 @@ namespace AAS
             numx = this.Width / 20;
             numy = this.Height / 20;
 
-            for (int i = -numx; i <= numx; i++)
-                g.DrawLine(p, i, ymin, i, ymax);
-            for (int i = -numy; i <= numy; i++)
-                g.DrawLine(p, xmin, i, xmax, i);
+
         }
 
         protected override void OnSizeChanged(EventArgs e)
