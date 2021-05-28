@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pb_Load = new System.Windows.Forms.ProgressBar();
             this.bgw_Control = new System.ComponentModel.BackgroundWorker();
+            this.pb_Load = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
-            // 
-            // pb_Load
-            // 
-            this.pb_Load.ForeColor = System.Drawing.Color.Red;
-            this.pb_Load.Location = new System.Drawing.Point(14, 13);
-            this.pb_Load.Name = "pb_Load";
-            this.pb_Load.Size = new System.Drawing.Size(758, 22);
-            this.pb_Load.TabIndex = 9;
             // 
             // bgw_Control
             // 
@@ -48,15 +40,24 @@
             this.bgw_Control.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgw_Control_ProgressChanged);
             this.bgw_Control.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgw_Control_RunWorkerCompleted);
             // 
+            // pb_Load
+            // 
+            this.pb_Load.Location = new System.Drawing.Point(12, 12);
+            this.pb_Load.Name = "pb_Load";
+            this.pb_Load.Size = new System.Drawing.Size(769, 37);
+            this.pb_Load.TabIndex = 0;
+            // 
             // Loading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 48);
+            this.ClientSize = new System.Drawing.Size(793, 61);
             this.Controls.Add(this.pb_Load);
             this.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Loading";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loading";
             this.Load += new System.EventHandler(this.Loading_Load);
@@ -65,7 +66,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ProgressBar pb_Load;
         private System.ComponentModel.BackgroundWorker bgw_Control;
+        private System.Windows.Forms.ProgressBar pb_Load;
     }
 }

@@ -71,6 +71,7 @@
             // 
             this.btn_Set.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_Set.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Set.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Set.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Set.Location = new System.Drawing.Point(546, 265);
             this.btn_Set.Name = "btn_Set";
@@ -104,6 +105,7 @@
             // 
             this.cbb_Shell.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbb_Shell.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_Shell.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbb_Shell.FormattingEnabled = true;
             this.cbb_Shell.Items.AddRange(new object[] {
             "5 m/s",
@@ -176,6 +178,7 @@
             // 
             this.btn_Shoot.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_Shoot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Shoot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Shoot.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Shoot.Location = new System.Drawing.Point(550, 509);
             this.btn_Shoot.Name = "btn_Shoot";
@@ -193,7 +196,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(381, 29);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Automatic Aiming System";
+            this.label4.Text = "Automated Aiming System";
             // 
             // label8
             // 

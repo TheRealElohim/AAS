@@ -10,3 +10,5 @@ F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.exe
 F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.pdb
 F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.Loading.resources
 F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.Trajectory.resources
+F:\Elaborato_Maturità\AAS\AAS\bin\Debug\AltoControls.dll
+F:\Elaborato_Maturità\AAS\AAS\obj\Debug\AAS.csproj.CopyComplete

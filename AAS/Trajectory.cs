@@ -41,9 +41,9 @@ namespace AAS
             if (V >= 100)
                 l.Show();
 
-            for (double x = 0; y >= -10; x += 0.1)
+            for (double x = 0; y >= 0; x += 0.1)
             {
-                l.pos++;
+                l.pos = x;
                 t = (-M / F * Math.Log(1 - (x * F) / (v0x * M)));
                 y = (-g * (Math.Pow(M, 2) / Math.Pow(F, 2)) - (v0y * M) / F) * (1 - (x * F / (v0x * M)) - 1) +
                     g * Math.Pow(M, 2) / (F * F) * Math.Log(1 - (x * F) / (v0x * M));
@@ -56,7 +56,6 @@ namespace AAS
                     MY = y;
                     MYT = t;
                 }
-
                 ps.Add(new []{x, y, t});
             }
 
@@ -78,7 +77,7 @@ namespace AAS
             }
             txt_Friction.Text = F + " PI";
             txt_Range.Text = R + " meters";
-            txt_Height.Text = MY + " seconds";
+            txt_Height.Text = MY + " meters";
             txt_Time.Text = MYT + " seconds";
             txt_TOF.Text = p1f[p1f.Count - 1].X + " seconds";
             TrajectoryPlane.AddCurve(pf);

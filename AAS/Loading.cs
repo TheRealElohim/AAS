@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AltoControls;
+using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 
@@ -7,7 +8,6 @@ namespace AAS
     public partial class Loading : Form
     {
         public double pos;
-
         public Loading()
         {
             InitializeComponent();
@@ -15,6 +15,7 @@ namespace AAS
 
         private void Loading_Load(object sender, EventArgs e)
         {
+            Console.WriteLine(pb_Load.Maximum);
             if (bgw_Control.IsBusy != true)
                 bgw_Control.RunWorkerAsync(pos);
         }
@@ -29,7 +30,7 @@ namespace AAS
                 if (pos != p)
                 {
                     p = pos;
-                    bgw.ReportProgress(0);
+                    bgw.ReportProgress(0, p);
                 }
             }
             bgw.WorkerSupportsCancellation = true;
@@ -37,7 +38,9 @@ namespace AAS
 
         private void bgw_Control_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            Action a = () => pb_Load.PerformStep();
+            Action a = () =>
+            pb_Load.PerformStep();
+            
             pb_Load.Invoke(a);
         }
 

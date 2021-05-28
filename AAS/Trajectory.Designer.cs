@@ -43,13 +43,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.TimeHeightPlane = new AAS.CarthesianPlaneTrajectory();
-            this.TrajectoryPlane = new AAS.CarthesianPlaneTrajectory();
             this.txt_Time = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_TOF = new System.Windows.Forms.TextBox();
+            this.TimeHeightPlane = new AAS.CarthesianPlaneTrajectory();
+            this.TrajectoryPlane = new AAS.CarthesianPlaneTrajectory();
             this.SuspendLayout();
             // 
             // bgw_Load
@@ -178,38 +178,6 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "Friction";
             // 
-            // TimeHeightPlane
-            // 
-            this.TimeHeightPlane.ColorAssi = System.Drawing.Color.Black;
-            this.TimeHeightPlane.ColorExtra = System.Drawing.Color.LightGray;
-            this.TimeHeightPlane.ColorLine = System.Drawing.Color.Red;
-            this.TimeHeightPlane.ColorPoint = System.Drawing.Color.Red;
-            this.TimeHeightPlane.K = 20;
-            this.TimeHeightPlane.Location = new System.Drawing.Point(633, 11);
-            this.TimeHeightPlane.MainColor = System.Drawing.Color.DarkBlue;
-            this.TimeHeightPlane.Name = "TimeHeightPlane";
-            this.TimeHeightPlane.Size = new System.Drawing.Size(576, 334);
-            this.TimeHeightPlane.TabIndex = 10;
-            this.TimeHeightPlane.Text = "5";
-            this.TimeHeightPlane.XC = 288;
-            this.TimeHeightPlane.YC = 167;
-            // 
-            // TrajectoryPlane
-            // 
-            this.TrajectoryPlane.ColorAssi = System.Drawing.Color.Black;
-            this.TrajectoryPlane.ColorExtra = System.Drawing.Color.LightGray;
-            this.TrajectoryPlane.ColorLine = System.Drawing.Color.Blue;
-            this.TrajectoryPlane.ColorPoint = System.Drawing.Color.Red;
-            this.TrajectoryPlane.K = 20;
-            this.TrajectoryPlane.Location = new System.Drawing.Point(14, 11);
-            this.TrajectoryPlane.MainColor = System.Drawing.Color.DarkBlue;
-            this.TrajectoryPlane.Name = "TrajectoryPlane";
-            this.TrajectoryPlane.Size = new System.Drawing.Size(613, 334);
-            this.TrajectoryPlane.TabIndex = 7;
-            this.TrajectoryPlane.Text = "5";
-            this.TrajectoryPlane.XC = 306;
-            this.TrajectoryPlane.YC = 167;
-            // 
             // txt_Time
             // 
             this.txt_Time.Location = new System.Drawing.Point(643, 367);
@@ -252,6 +220,38 @@
             this.txt_TOF.ReadOnly = true;
             this.txt_TOF.Size = new System.Drawing.Size(194, 19);
             this.txt_TOF.TabIndex = 20;
+            // 
+            // TimeHeightPlane
+            // 
+            this.TimeHeightPlane.ColorAssi = System.Drawing.Color.Black;
+            this.TimeHeightPlane.ColorExtra = System.Drawing.Color.LightGray;
+            this.TimeHeightPlane.ColorLine = System.Drawing.Color.Red;
+            this.TimeHeightPlane.ColorPoint = System.Drawing.Color.Red;
+            this.TimeHeightPlane.K = 20;
+            this.TimeHeightPlane.Location = new System.Drawing.Point(633, 11);
+            this.TimeHeightPlane.MainColor = System.Drawing.Color.DarkBlue;
+            this.TimeHeightPlane.Name = "TimeHeightPlane";
+            this.TimeHeightPlane.Size = new System.Drawing.Size(576, 334);
+            this.TimeHeightPlane.TabIndex = 10;
+            this.TimeHeightPlane.Text = "5";
+            this.TimeHeightPlane.XC = 288;
+            this.TimeHeightPlane.YC = 167;
+            // 
+            // TrajectoryPlane
+            // 
+            this.TrajectoryPlane.ColorAssi = System.Drawing.Color.Black;
+            this.TrajectoryPlane.ColorExtra = System.Drawing.Color.LightGray;
+            this.TrajectoryPlane.ColorLine = System.Drawing.Color.Blue;
+            this.TrajectoryPlane.ColorPoint = System.Drawing.Color.Red;
+            this.TrajectoryPlane.K = 20;
+            this.TrajectoryPlane.Location = new System.Drawing.Point(14, 11);
+            this.TrajectoryPlane.MainColor = System.Drawing.Color.DarkBlue;
+            this.TrajectoryPlane.Name = "TrajectoryPlane";
+            this.TrajectoryPlane.Size = new System.Drawing.Size(613, 334);
+            this.TrajectoryPlane.TabIndex = 7;
+            this.TrajectoryPlane.Text = "5";
+            this.TrajectoryPlane.XC = 306;
+            this.TrajectoryPlane.YC = 167;
             // 
             // Trajectory
             // 
