@@ -44,9 +44,9 @@ namespace AAS
             for (double x = 0; y >= 0; x += 0.1)
             {
                 l.pos = x;
-                t = (-M / Fy * Math.Log(1 - (x * Fx) / (v0x * M)));
-                y = (-g * (Math.Pow(M, 2) / Math.Pow(Fy, 2)) - (v0y * M) / Fy) * (1 - (x * Fx / (v0x * M)) - 1) +
-                    g * Math.Pow(M, 2) / (Fx * Fy) * Math.Log(1 - (x * Fx) / (v0x * M));
+                t = (-M / Fx * Math.Log(1 - (x * Fx) / (v0x * M)));
+                y = (-g * (Math.Pow(M, 2) / Math.Pow(Fy, 2)) - (v0y * M) / Fy) * (Math.Pow(1 - (x * Fx / (v0x * M)), (Fy/Fx)) - 1) +
+                    g * Math.Pow(M, 2) / (Fy * Fx) * Math.Log(1 - (x * Fx) / (v0x * M));
 
                 if (y >= 0)
                     R = x;
