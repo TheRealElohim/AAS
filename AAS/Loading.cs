@@ -15,7 +15,6 @@ namespace AAS
 
         private void Loading_Load(object sender, EventArgs e)
         {
-            Console.WriteLine(pb_Load.Maximum);
             if (bgw_Control.IsBusy != true)
                 bgw_Control.RunWorkerAsync(pos);
         }

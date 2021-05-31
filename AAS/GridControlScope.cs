@@ -106,17 +106,6 @@ namespace AAS
             g.ResetTransform();
             g.TranslateTransform(xc, yc);
             g.ScaleTransform(20, -20);
-            p = new Pen(Color.FromArgb(50, extraC), 1 / K);
-
-            xmax = -xc / 20;
-            ymax = -(this.Height - yc) / 20;
-            ymin = yc / 20;
-            xmin = (this.Width - xc) / 20;
-
-            numx = this.Width / 20;
-            numy = this.Height / 20;
-
-
         }
 
         protected override void OnSizeChanged(EventArgs e)

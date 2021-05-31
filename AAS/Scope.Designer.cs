@@ -197,9 +197,9 @@
             this.label4.Font = new System.Drawing.Font("OCR A Extended", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(381, 29);
+            this.label4.Size = new System.Drawing.Size(429, 29);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Automated Aiming System";
+            this.label4.Text = "Automated Targeting System";
             // 
             // label8
             // 
